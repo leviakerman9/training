@@ -53,8 +53,8 @@ console.log(unflatten(flat));
 
 ## How to Run
 
-1. Open the `javascript-assignment.js` file
+1. Open the `jsAssignment.js` file
 2. Each function is self-contained and can be tested independently
 3. Use Node.js to run the file:
    ```bash
-   node javascript-assignment.js
+   node jsAssignment.js
