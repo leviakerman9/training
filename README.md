@@ -8,10 +8,10 @@ Welcome! This repository is a collection of tasks completed during the Basic Tra
 
 Assignments are grouped by topic and maintained in separate branches. Below is a quick look at what each branch covers:
 
-### Day 0 -Shell Script Assignment
+### [Day 0 -Shell Script Assignment](https://github.com/leviakerman9/Training/tree/assignment0)
 - **Branch:** `assignment0`   
   Focuses on writing simple shell scripts, working with file permissions, and using basic command-line tools.
 
-### Day 2 - JavaScript Assignment
+### [Day 2 - JavaScript Assignment](https://github.com/leviakerman9/training/tree/assignment1)
 - **Branch:** `assignment1`  
   JavaScript-based logic problems, including array manipulation, working with objects, and simple DSA patterns.
