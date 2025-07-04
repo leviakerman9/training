@@ -1,0 +1,356 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xf8D81cCADA72052B3e1a76075404029A3a09E865",
+      "txHash": "0xe9261a73e7f66c3871b8c008d105b8ae010ebf97030888b6b7315bca8fa8fdc0",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xE00addfBCbb8136Ff47AF8D49f7Ba2A257e71b45",
+      "txHash": "0xec853171f45389ce7583a27410aa3db59a63811c986d2bfa9ddbd691d60656e6",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x7D5903F463298D7F0afdD6a8F1Eca79c8DA4887a",
+      "txHash": "0x9983f8bcef77bc965863028dd89507c518a74423351649f8fb44c5e1d78b65b7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xDc90f90DC708d4520E440a0aCAd732815C5e5ef9",
+      "txHash": "0x00e9bdc3f192efe70fd7d1455ec9b75ad7c38ffbc724e0201e1cde8b9160cbe2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xe57ECB8a056472eB8fce0850Eb471F4977Bf4baC",
+      "txHash": "0x5cb9461a0ccdb0da600134b0b69bc137e6d510f9feed93b9c7b9d2375c2bfeaa",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xFfE4A9c89d88062C21a45e75990d142Ba3ea6CBa",
+      "txHash": "0xf535b288fb0d635d59919019ac4fe6186106b5995716ec707704a5832ea30cc2",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x4460e651de04c3FE2D038980Bf42DeF3a79158a7",
+      "txHash": "0x20403346e3760bf88ec225e64cad4fe94d497802100a607db4f8134d6c93fc28",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x365bdDbee400Fbb7984932a17aE4e05b538fcA5A",
+      "txHash": "0xfed60c995d048c97b5c82f1d5a59dc8f2a2aae46ae424c6086c7ea47502a6422",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xBAceCa0E44D15CC275D4c30b6BbF258828F9D0D4",
+      "txHash": "0x6c9725f2aef82330006f916123cb121a42aa20b99ecc123bc4d2d2b480124077",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "23264c6e44e57b53eb61947f40cb1a6bce883322ce8634064be92a9b9fa2fbec": {
+      "address": "0x7a72167e2bbCCC2Fc96A4DdE83E08C08b6693662",
+      "txHash": "0xfecda85c4246d8dd6b96576732e2e9ab8b2105c794b2d83d6b24180629bce20f",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "owner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "Todolist",
+            "src": "contracts\\Todolist.sol:9"
+          },
+          {
+            "label": "tasks",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Task)288_storage)",
+            "contract": "Todolist",
+            "src": "contracts\\Todolist.sol:20"
+          },
+          {
+            "label": "assigneeToTasks",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "Todolist",
+            "src": "contracts\\Todolist.sol:21"
+          },
+          {
+            "label": "taskcount",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "Todolist",
+            "src": "contracts\\Todolist.sol:22"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)7_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)278": {
+            "label": "enum Todolist.Status",
+            "members": [
+              "NotStarted",
+              "InProgress",
+              "Completed"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Task)288_storage)": {
+            "label": "mapping(uint256 => struct Todolist.Task)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Task)288_storage": {
+            "label": "struct Todolist.Task",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "content",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)278",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "assignee",
+                "type": "t_address",
+                "offset": 1,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "c66a5415e6142799ee4f8b9e4026167ea4c809e44393c7f48bdf6fc64faee8ce": {
+      "address": "0xc7EAf69C990df7Fc987886a172a7CbEd03326716",
+      "txHash": "0xe3f8cc60a8223ee4004f2858bd9c9a348648ac92d3a38c143b1078dc0afcc969",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "owner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address",
+            "contract": "TodolistV2",
+            "src": "contracts\\TodolistV2.sol:7"
+          },
+          {
+            "label": "tasks",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Task)638_storage)",
+            "contract": "TodolistV2",
+            "src": "contracts\\TodolistV2.sol:18"
+          },
+          {
+            "label": "assigneeToTasks",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)",
+            "contract": "TodolistV2",
+            "src": "contracts\\TodolistV2.sol:19"
+          },
+          {
+            "label": "taskcount",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "TodolistV2",
+            "src": "contracts\\TodolistV2.sol:20"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)7_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)628": {
+            "label": "enum TodolistV2.Status",
+            "members": [
+              "NotStarted",
+              "InProgress",
+              "Completed"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+            "label": "mapping(address => uint256[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(Task)638_storage)": {
+            "label": "mapping(uint256 => struct TodolistV2.Task)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Task)638_storage": {
+            "label": "struct TodolistV2.Task",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "content",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "status",
+                "type": "t_enum(Status)628",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "assignee",
+                "type": "t_address",
+                "offset": 1,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

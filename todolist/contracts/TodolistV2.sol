@@ -1,11 +1,9 @@
-//SPDX-License-Identifier: UNLICENSED
-
+// SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.28;
+
 import"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-
-contract Todolist is Initializable {
-
+contract TodolistV2 is Initializable {
     address public owner;
 
     enum Status { NotStarted, InProgress, Completed }
@@ -27,10 +25,6 @@ contract Todolist is Initializable {
     event TaskUpdated(uint256 id, string content);
     event TaskAssigned(uint256 id, address assignee);
 
-    function initialize(address _owner) public initializer {
-        owner = _owner;
-    }
-
     modifier onlyOwner() {
         require(msg.sender == owner, "Only owner can do this");
         _;
@@ -42,6 +36,10 @@ contract Todolist is Initializable {
             "Not authorized"
         );
         _;
+    }
+
+    function initialize(address _owner) public initializer {
+        owner = _owner;
     }
 
     function createTask(string memory _content, address _assignee) public onlyOwner {
@@ -90,5 +88,10 @@ contract Todolist is Initializable {
 
     function getCount() public view returns (uint256) {
         return taskcount;
+    }
+
+    // new function added in v2 to get the count of tasks assigned to an assignee
+    function getAssignedTaskCount(address _assignee) public view returns (uint256) {
+        return assigneeToTasks[_assignee].length;
     }
 }
